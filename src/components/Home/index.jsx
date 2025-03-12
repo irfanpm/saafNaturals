@@ -23,12 +23,12 @@ const Home = () => (
         </p>
         <p className={`${styles.header_tagline} fade-in`}>{staticInfo.tagline}</p>
         <div className="button-container fade-in">
-          <Button name="Shop Now" path="#products" />
+          {/* <Button name="Shop Now" path="#products" /> */}
           <Button name="Learn More" path="#about" variant="outline" />
         </div>
       </div>
       <div className={styles.hero_image}>
-        <img src="/saafImage/coconut-splash.jpg" alt="Coconut Splash" />
+        <img src="/saafImage/coconutLeafHome.jpeg" alt="Coconut Splash" />
       </div>
     </div>
   </div>
