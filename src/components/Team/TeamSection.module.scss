@@ -1,0 +1,118 @@
+.teamSection {
+  background-color: #e9f5e9; /* Pale green */
+  padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  .full_background {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(144, 238, 144, 0.1), rgba(245, 245, 220, 0.2)); /* Subtle green to cream */
+    z-index: -1;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+
+    .header {
+      margin-bottom: 3rem;
+
+      .title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2e8b57; /* Sea green */
+        margin-bottom: 1rem;
+      }
+
+      .description {
+        font-family: 'Roboto', sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        color: #3c2f2f; /* Coconut brown */
+        font-size: 1.2rem;
+      }
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.teamMember {
+  background-color: #f5f5dc; /* Coconut cream */
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 100, 0, 0.1); /* Green-tinted shadow */
+  border: 1px solid #2e8b57; /* Sea green border */
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 100, 0, 0.15);
+  }
+
+  .imageContainer {
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #e9f5e9; /* Pale green */
+    box-shadow: 0 4px 6px rgba(0, 100, 0, 0.1);
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .details {
+    .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2e8b57; /* Sea green */
+    }
+
+    .role {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      color: #3c2f2f; /* Coconut brown */
+      margin-bottom: 1rem;
+    }
+
+    .socialLinks {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+
+      .socialLink {
+        color: #2e8b57; /* Sea green */
+        transition: color 0.2s;
+
+        &:hover {
+          color: #228b22; /* Forest green */
+        }
+
+        .icon {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+}

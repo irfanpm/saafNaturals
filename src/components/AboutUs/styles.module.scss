@@ -1,0 +1,174 @@
+.about_section {
+  position: relative;
+  padding: 8rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e9f5e9; /* Pale green */
+  overflow: hidden;
+}
+
+/* Full Background */
+.full_background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(144, 238, 144, 0.3), rgba(245, 245, 220, 0.5)); /* Light green to coconut cream */
+  z-index: -1;
+}
+
+/* Leaf Border */
+.leaf_border {
+  position: absolute;
+  inset: 0;
+  background: url('/saafImage/leaf-pattern.png') repeat;
+  background-size: 150px;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Content Wrapper */
+.content_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1300px;
+  width: 100%;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+/* Left and Right Cards */
+.left_card,
+.right_card {
+  flex: 1;
+  background: rgba(245, 245, 220, 0.9); /* Coconut cream */
+  padding: 3rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 100, 0, 0.1); /* Green-tinted shadow */
+  border: 2px solid #8fbc8f; /* Sea green */
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 100, 0, 0.15);
+  }
+
+  .title {
+    font-family: 'Playfair Display', serif; /* Elegant and natural */
+    font-size: 2.7rem;
+    color: #2e8b57; /* Sea green */
+    margin-bottom: 1.2rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #3c2f2f; /* Coconut brown */
+    margin-bottom: 2rem;
+  }
+
+  .button {
+    background: #2e8b57; /* Sea green */
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #228b22; /* Forest green */
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(34, 139, 34, 0.4);
+    }
+  }
+}
+
+/* Center Image */
+.center_image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image {
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 100, 0, 0.2);
+  transition: all 0.4s ease;
+  border: 3px solid #f5f5dc; /* Coconut cream border */
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 100, 0, 0.3);
+  }
+}
+
+/* Animations */
+@keyframes swayIn {
+  0% { opacity: 0; transform: translateY(30px) rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  100% { opacity: 1; transform: translateY(0) rotate(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.left_card,
+.right_card {
+  animation: swayIn 1.2s ease-out forwards;
+}
+
+.center_image {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 900px) {
+  .about_section {
+    padding: 6rem 1rem;
+  }
+
+  .content_wrapper {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .left_card,
+  .right_card {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 0.9rem 2rem;
+  }
+
+  .image {
+    width: 250px;
+    height: auto;
+  }
+}

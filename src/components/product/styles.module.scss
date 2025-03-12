@@ -1,0 +1,214 @@
+.gallery_container {
+  position: relative;
+  padding: 6rem 2rem;
+  background: #e9f5e9; /* Pale green */
+  overflow: hidden;
+}
+
+/* Full Background */
+.full_background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(144, 238, 144, 0.2), rgba(245, 245, 220, 0.4)); /* Subtle green to cream */
+  z-index: -1;
+}
+
+/* Gallery Header */
+.gallery_header {
+  text-align: center;
+  margin-bottom: 4rem;
+  z-index: 2;
+  position: relative;
+
+  .section {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2e8b57; /* Sea green */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+  }
+
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2e8b57; /* Sea green */
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 5px rgba(0, 100, 0, 0.1);
+  }
+
+  .intro {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: #3c2f2f; /* Coconut brown */
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+
+/* Gallery */
+.gallery {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.carousel {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  padding: 2rem 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card {
+  flex: none;
+  width: 300px;
+  height: 420px;
+  background: rgba(245, 245, 220, 0.95); /* Coconut cream */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 100, 0, 0.1); /* Green-tinted shadow */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 100, 0, 0.2);
+  }
+
+  .image_wrapper {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    border-bottom: 2px solid #2e8b57; /* Sea green */
+
+    img {
+      transition: transform 0.4s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.08);
+    }
+
+    .leaf_accent {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      background: url('/saafImage/leaf-icon.png') no-repeat center;
+      background-size: contain;
+      opacity: 0.8;
+    }
+  }
+
+  .details {
+    padding: 1.5rem;
+    text-align: center;
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #2e8b57; /* Sea green */
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.3rem;
+      color: #3c2f2f; /* Coconut brown */
+    }
+  }
+}
+
+/* Controls */
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+
+  .arrow {
+    font-size: 2.5rem;
+    color: #2e8b57; /* Sea green */
+    background: rgba(245, 245, 220, 0.9); /* Coconut cream */
+    border-radius: 50%;
+    padding: 0.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 100, 0, 0.1);
+    pointer-events: all;
+
+    &:hover {
+      background: #228b22; /* Forest green */
+      color: #f5f5dc; /* Coconut cream */
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 100, 0, 0.2);
+    }
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+  .carousel {
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+
+  .card {
+    width: 260px;
+    height: 380px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gallery_container {
+    padding: 4rem 1rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+  }
+
+  .card {
+    width: 220px;
+    height: 340px;
+  }
+
+  .details {
+    h3 { font-size: 1.4rem; }
+    p { font-size: 1.2rem; }
+  }
+
+  .arrow {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+}

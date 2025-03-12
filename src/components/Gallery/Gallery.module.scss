@@ -1,0 +1,159 @@
+.gallery {
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 16px;
+  background: #e9f5e9; /* Pale green */
+
+  @media (min-width: 768px) {
+    padding: 24px 109px;
+  }
+
+  /* Full Background */
+  .full_background {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(144, 238, 144, 0.1), rgba(245, 245, 220, 0.2)); /* Subtle green to cream */
+    z-index: -1;
+  }
+
+  &Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2e8b57; /* Sea green */
+
+      @media (min-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      max-width: 600px;
+      color: #3c2f2f; /* Coconut brown */
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+
+    .galleryMoreButton {
+      padding: 8px 16px;
+      border: 2px solid #2e8b57; /* Sea green */
+      background-color: #f5f5dc; /* Coconut cream */
+      color: #2e8b57;
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 8px;
+      transition: background-color 0.2s, color 0.2s;
+
+      &:hover {
+        background-color: #2e8b57;
+        color: #f5f5dc; /* Coconut cream */
+      }
+
+      @media (min-width: 768px) {
+        padding: 12px 32px;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+
+    @media (min-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+
+  .galleryItem {
+    position: relative;
+    height: 192px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 6px rgba(0, 100, 0, 0.1); /* Green-tinted shadow */
+    border: 1px solid #f5f5dc; /* Coconut cream border */
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &.colSpan2 {
+      grid-column: span 2;
+
+      @media (max-width: 479px) {
+        grid-column: span 1;
+      }
+    }
+
+    @media (min-width: 768px) {
+      height: 320px;
+    }
+
+    &Overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(197, 230, 211, 0.7), transparent); /* Sea green fade */
+      opacity: 0.1;
+    }
+
+    &Content {
+      position: relative;
+      width: 100%;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (min-width: 768px) {
+        padding: 16px 20px;
+      }
+    }
+
+    &Title {
+      font-family: 'Playfair Display', serif;
+      color: #f5f5dc; /* Coconut cream */
+      font-size: 0.875rem;
+      font-weight: 600;
+
+      @media (min-width: 768px) {
+        font-size: 1.125rem;
+      }
+    }
+
+    &Price {
+      font-family: 'Roboto', sans-serif;
+      color: #f5f5dc; /* Coconut cream */
+      font-size: 0.875rem;
+      font-weight: 500;
+
+      @media (min-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}
