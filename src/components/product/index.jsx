@@ -43,7 +43,7 @@ const Products = () => {
   };
 
   return (
-    <div className={styles.gallery_container}>
+    <div className={styles.gallery_container}id='product'>
       <div className={styles.full_background}></div>
       <div className={styles.gallery_header}>
         <h3 className={styles.section}>{staticInfo.section}</h3>

@@ -2,39 +2,28 @@ import Image from 'next/image';
 import styles from './styles.module.scss';
 
 const AboutUs = () => {
-  const aboutTitle = "About Saaf Naturals";
-  const aboutIntro =
-    "Rooted in nature, we craft coconut wonders that nourish your body and the planet.";
-  const valuesTitle = "Our Core Values";
-  const valuesIntro =
-    "Sustainability, purity, and passion drive us to bring you the best of the grove.";
-
   return (
     <section className={styles.about_section} id="about">
-      <div className={styles.full_background}></div>
-      <div className={styles.leaf_border}></div>
-
-      <div className={styles.content_wrapper}>
-        <div className={styles.left_card}>
-          <h1 className={styles.title}>{aboutTitle}</h1>
-          <p className={styles.text}>{aboutIntro}</p>
-          <button className={styles.button}>Our Roots</button>
+      <div className={styles.container}>
+        {/* Left Side: Text Content */}
+        <div className={styles.text_content}>
+          <h2>Saaf Naturals: Purely Natural, Sustainably Yours</h2>
+          <p>
+            At Saaf Naturals, we craft coconut products with unwavering commitment to purity, sustainability, and community. Our chemical-free offerings embody authenticity, sourced responsibly to honor the earth and empower local farmers. Every product reflects our dedication to quality, transparency, and eco-conscious innovation. By blending time-honored traditions with purposeful advancements, we deliver wholesome goodness that nurtures both people and the planet. Join us in our mission to create a cleaner, greener future—one coconut at a time.
+          </p>
+          <button className={styles.cta_button}>Discover Our Story</button>
         </div>
 
-        <div className={styles.center_image}>
+        {/* Right Side: Image */}
+        <div className={styles.image_wrapper}>
           <Image
-            src="/saafImage/oilBottle.png"
-            alt="Coconut Oil Bottle"
-            width={350}
-            height={450}
+            src="/saafImage/coconut-still-life_(5)[1].jpg"
+            alt="Coconut Oil Bottle with Natural Elements"
+            width={450}
+            height={550}
             className={styles.image}
+            priority
           />
-        </div>
-
-        <div className={styles.right_card}>
-          <h1 className={styles.title}>{valuesTitle}</h1>
-          <p className={styles.text}>{valuesIntro}</p>
-          <button className={styles.button}>Our Heart</button>
         </div>
       </div>
     </section>

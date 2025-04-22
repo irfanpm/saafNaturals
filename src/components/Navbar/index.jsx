@@ -12,8 +12,7 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   
   // Static navbar items
-  const navbarItems = ['Home', 'About', 'Menu', 'Contact'];
-  const actionText = 'Login'; // Example action text
+  const navbarItems = ['Home', 'About', 'Product', 'Gallery', 'Owner','Contact'];
   const logoUrl = ''; // Static logo image
 
   const handleToggle = () => {
@@ -41,9 +40,7 @@ const Navbar = () => {
         ))}
       </ul>
       <div className={styles.navbar_login}>
-        <p className={cn(styles.menu_item, 'opensans')}>
-          <Link href='#contact' passHref>{actionText}</Link>
-        </p>
+      
       </div>
       <div className={styles.navbar_smallscreen}>
         <GiHamburgerMenu className={styles.navbar_hamburger} onClick={handleToggle} />

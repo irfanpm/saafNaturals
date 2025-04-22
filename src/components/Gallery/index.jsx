@@ -32,7 +32,7 @@ const Gallery = () => {
   ];
 
   return (
-    <div className={styles.gallery}>
+    <div className={styles.gallery} id='gallery' >
       <div className={styles.full_background}></div>
       <div className={styles.galleryHeader}>
         <h2>Our Coconut Treasures</h2>
