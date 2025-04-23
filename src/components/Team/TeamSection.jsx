@@ -17,7 +17,7 @@ const TeamSection = () => {
     {
       id: 2,
       name: 'Muhammed Ashraf pn',
-      role: 'CEO',
+      role: 'COO',
       image: '/saafImage/asru.jpg',
       bio: 'Financial strategist with a passion for eco-friendly business models, ensuring Saaf Natural’s growth and stability.',
       socialLinks: [
