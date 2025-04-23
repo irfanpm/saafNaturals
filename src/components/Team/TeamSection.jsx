@@ -5,7 +5,7 @@ const TeamSection = () => {
   const teamMembers = [
     {
       id: 1,
-      name: 'Muhammed Asru',
+      name: 'Nowshad pk',
       role: 'Founder / CEO',
       image: '/saafImage/asrudad.jpg',
       bio: 'Visionary leader with over 15 years of experience in natural products, driving Saaf Natural’s mission for sustainability and quality.',
@@ -16,7 +16,7 @@ const TeamSection = () => {
     },
     {
       id: 2,
-      name: 'Muhammed Asru',
+      name: 'Muhammed Ashraf pn',
       role: 'CEO',
       image: '/saafImage/asru.jpg',
       bio: 'Financial strategist with a passion for eco-friendly business models, ensuring Saaf Natural’s growth and stability.',
