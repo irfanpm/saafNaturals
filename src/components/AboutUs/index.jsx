@@ -7,7 +7,7 @@ const AboutUs = () => {
       <div className={styles.container}>
         {/* Left Side: Text Content */}
         <div className={styles.text_content}>
-          <h2>Saaf Naturals: Purely Natural, Sustainably Yours</h2>
+          <h2 className={styles.text_header}>Saaf Naturals: Purely Natural, Sustainably Yours</h2>
           <p>
             At Saaf Naturals, we craft coconut products with unwavering commitment to purity, sustainability, and community. Our chemical-free offerings embody authenticity, sourced responsibly to honor the earth and empower local farmers. Every product reflects our dedication to quality, transparency, and eco-conscious innovation. By blending time-honored traditions with purposeful advancements, we deliver wholesome goodness that nurtures both people and the planet. Join us in our mission to create a cleaner, greener future—one coconut at a time.
           </p>

@@ -1,117 +1,215 @@
 .teamSection {
-  background-color: #f8f5f0;
-  padding: 6rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background-color: #f9f9f5;
+  padding: 8rem 0;
   position: relative;
+  overflow: hidden;
 
   .full_background {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(144, 238, 144, 0.1), rgba(245, 245, 220, 0.2)); /* Subtle green to cream */
+    background: linear-gradient(135deg, rgba(46, 139, 87, 0.1), rgba(245, 245, 220, 0.3));
     z-index: -1;
+    animation: gradientShift 10s ease infinite;
   }
 
   .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
     text-align: center;
 
     .header {
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
+      animation: fadeInUp 1s ease-out;
 
       .title {
         font-family: 'Playfair Display', serif;
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #2e8b57; /* Sea green */
-        margin-bottom: 1rem;
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: #2e8b57;
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
       }
 
       .description {
         font-family: 'Roboto', sans-serif;
-        max-width: 600px;
+        max-width: 700px;
         margin: 0 auto;
-        color: #3c2f2f; /* Coconut brown */
-        font-size: 1.2rem;
+        color: #3c2f2f;
+        font-size: 1.3rem;
+        line-height: 1.6;
+        opacity: 0.9;
       }
     }
 
     .grid {
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 3rem;
       flex-wrap: wrap;
     }
   }
 }
 
 .teamMember {
-  background-color: #f5f5dc; /* Coconut cream */
-  border-radius: 1rem;
-  padding: 2rem;
+  background: linear-gradient(145deg, #ffffff, #f5f5dc);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
   text-align: center;
-  width: 300px;
-  box-shadow: 0 8px 16px rgba(0, 100, 0, 0.1); /* Green-tinted shadow */
-  border: 1px solid #2e8b57; /* Sea green border */
-  transition: transform 0.3s ease-in-out;
+  width: 350px;
+  box-shadow: 0 10px 20px rgba(0, 100, 0, 0.15);
+  border: 2px solid #2e8b57;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
 
   &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 20px rgba(0, 100, 0, 0.15);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 100, 0, 0.2);
+    .imageOverlay {
+      opacity: 0.3;
+    }
   }
 
   .imageContainer {
-    width: 8rem;
-    height: 8rem;
-    margin: 0 auto 1rem;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto 1.5rem;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #e9f5e9; /* Pale green */
-    box-shadow: 0 4px 6px rgba(0, 100, 0, 0.1);
+    position: relative;
+    background: #e9f5e9;
+    box-shadow: 0 6px 12px rgba(0, 100, 0, 0.15);
+    transition: transform 0.3s ease;
 
     .image {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .imageOverlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(46, 139, 87, 0.4), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
   }
 
   .details {
     .name {
       font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 700;
-      color: #2e8b57; /* Sea green */
+      color: #2e8b57;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     .role {
       font-family: 'Roboto', sans-serif;
-      font-size: 1rem;
-      color: #3c2f2f; /* Coconut brown */
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #3c2f2f;
       margin-bottom: 1rem;
+    }
+
+    .bio {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      color: #4a3b3b;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .socialLinks {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.5rem;
 
       .socialLink {
-        color: #2e8b57; /* Sea green */
-        transition: color 0.2s;
+        color: #2e8b57;
+        transition: all 0.3s ease;
+        transform: scale(1);
 
         &:hover {
-          color: #228b22; /* Forest green */
+          color: #228b22;
+          transform: scale(1.2);
         }
 
         .icon {
-          width: 1.5rem;
-          height: 1.5rem;
+          width: 2rem;
+          height: 2rem;
         }
+      }
+    }
+  }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .teamSection {
+    padding: 4rem 0;
+  }
+
+  .container {
+    .header {
+      .title {
+        font-size: 2.5rem;
+      }
+
+      .description {
+        font-size: 1.1rem;
+      }
+    }
+
+    .grid {
+      gap: 2rem;
+    }
+  }
+
+  .teamMember {
+    width: 300px;
+    padding: 1.5rem;
+
+    .imageContainer {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    .details {
+      .name {
+        font-size: 1.8rem;
+      }
+
+      .role {
+        font-size: 1rem;
+      }
+
+      .bio {
+        font-size: 0.9rem;
       }
     }
   }

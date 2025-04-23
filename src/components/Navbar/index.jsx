@@ -1,19 +1,16 @@
 import { useState } from 'react';
 import cn from 'classnames';
 import Link from 'next/link';
-import Image from 'next/image';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdOutlineRestaurantMenu } from 'react-icons/md';
-import images from 'constants/images'; // Import your images
 
 import styles from './styles.module.scss';
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   
-  // Static navbar items
-  const navbarItems = ['Home', 'About', 'Product', 'Gallery', 'Owner','Contact'];
-  const logoUrl = ''; // Static logo image
+  // Static navbar items with Contact moved to last
+  const navbarItems = ['Home', 'About', 'Product', 'Gallery', 'Owner', 'Contact'];
 
   const handleToggle = () => {
     setToggleMenu(prev => !prev);
@@ -23,11 +20,7 @@ const Navbar = () => {
     <nav className={styles.navbar_container} id='navigation'>
       <Link href='/#home' passHref>
         <div className={styles.navbar_logo}>
-          {/* <Image
-            src={logoUrl}
-            layout='fill'
-            objectFit='cover'
-            alt='logo' /> */}
+          <span className={styles.brand_name}>Saaf Natural</span>
         </div>
       </Link>
       <ul className={styles.navbar_links}>
@@ -40,7 +33,6 @@ const Navbar = () => {
         ))}
       </ul>
       <div className={styles.navbar_login}>
-      
       </div>
       <div className={styles.navbar_smallscreen}>
         <GiHamburgerMenu className={styles.navbar_hamburger} onClick={handleToggle} />

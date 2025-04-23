@@ -25,7 +25,7 @@ const Gallery = () => {
     },
     {
       id: 4,
-      imageUrl: '/saafImage/cocoprd4.jpg',
+      imageUrl: '/saafImage/coconutonly.png',
       title: 'Coconut Chips',
       price: '$10.00',
     },

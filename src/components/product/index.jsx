@@ -12,7 +12,7 @@ const staticInfo = {
     { title: 'Coconut Oil', price: '$15.00', picture: { imgix_url: '/saafImage/coconutprd1.jpg' } },
     { title: 'Coconut Milk', price: '$12.00', picture: { imgix_url: '/saafImage/cocoprd2.jpg' } },
     { title: 'Coconut Soap', price: '$8.00', picture: { imgix_url: '/saafImage/cocoprd3.jpg' } },
-    { title: 'Coconut Chips', price: '$10.00', picture: { imgix_url: '/saafImage/cocoprd4.jpg' } },
+    { title: 'Coconut Chips', price: '$10.00', picture: { imgix_url: '/saafImage/coconuntChips.png' } },
   ],
 };
 
