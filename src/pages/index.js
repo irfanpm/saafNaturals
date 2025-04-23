@@ -95,7 +95,7 @@ function Template() {
       <Head>
         <title>Saaf Naturals</title>
         <meta name="description" content="Create template using cosmic.js CMS" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/saafImage/coconut1.png" />
       </Head>
         <Home info={headerInfo} />
         <AboutUs info={aboutInfo} />
