@@ -9,7 +9,7 @@ const ProductDetail = ({ details }) => {
   const { title, price, picture, description } = details;
 
   useEffect(() => {
-    if (!title || !price || !picture) {
+    if (!title || !picture) {
       router.push('/'); // Redirect if no product details are found
     }
   }, [title, price, picture, router]);
@@ -30,9 +30,8 @@ const ProductDetail = ({ details }) => {
       <div className={styles.content_section}>
         <h1 className={styles.title}>{title}</h1>
         <div className={styles.rating}>
-          <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
         </div>
-        <p className={styles.price}>${price}</p>
+
         <p className={styles.description}>
           {description || 'Experience the best quality coconut products crafted for you.'}
         </p>
@@ -41,9 +40,9 @@ const ProductDetail = ({ details }) => {
           <p><FaLeaf /> <strong>Ingredients:</strong> 100% Pure Coconut</p>
           <p><FaLeaf /> <strong>Benefits:</strong> Nourishes skin, promotes hair growth, supports digestion</p>
         </div>
-        <button className={styles.buy_button}>
+        {/* <button className={styles.buy_button}>
           <FaShoppingCart /> Buy Now
-        </button>
+        </button> */}
       </div>
     </div>
   );

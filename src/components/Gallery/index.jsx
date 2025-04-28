@@ -7,27 +7,23 @@ const Gallery = () => {
       id: 1,
       imageUrl: '/saafImage/coconutprd1.jpg',
       title: 'Coconut Oil',
-      price: '$15.00',
     },
     {
       id: 2,
       imageUrl: '/saafImage/cocoprd2.jpg',
       title: 'Coconut Milk',
-      price: '$12.00',
       colSpan: 2,
     },
     {
       id: 3,
       imageUrl: '/saafImage/cocoprd3.jpg',
       title: 'Coconut Soap',
-      price: '$8.00',
       colSpan: 2,
     },
     {
       id: 4,
       imageUrl: '/saafImage/coconutonly.png',
       title: 'Coconut Chips',
-      price: '$10.00',
     },
   ];
 

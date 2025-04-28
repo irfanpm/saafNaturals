@@ -159,11 +159,27 @@
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 100, 0, 0.1); /* Green-tinted shadow */
     border: 2px solid #f5f5dc; /* Coconut cream border */
+    overflow: hidden; /* Ensure the iframe respects border-radius */
+    min-height: 650px; /* Match original height */
+    width: 100%; /* Full width within flex container */
+    max-width: 600px; /* Match original max-width for consistency */
+  }
+
+  .map_iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   @media screen and (max-width: 1150px) {
     .contact_info {
       max-width: 80%;
+    }
+
+    .contact_image {
+      max-width: 100%; /* Allow full width on smaller screens */
     }
   }
 
@@ -175,6 +191,8 @@
 
     .contact_image {
       margin-top: 3rem;
+      max-width: 100%;
+      min-height: 400px; /* Adjust height for smaller screens */
     }
   }
 }

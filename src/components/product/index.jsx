@@ -9,10 +9,30 @@ const staticInfo = {
   title: 'Discover Coconut Goodness',
   intro: 'Browse our handcrafted, natural coconut products made with care.',
   menu: [
-    { title: 'Coconut Oil', price: '$15.00', picture: { imgix_url: '/saafImage/coconutprd1.jpg' } },
-    { title: 'Coconut Milk', price: '$12.00', picture: { imgix_url: '/saafImage/cocoprd2.jpg' } },
-    { title: 'Coconut Soap', price: '$8.00', picture: { imgix_url: '/saafImage/cocoprd3.jpg' } },
-    { title: 'Coconut Chips', price: '$10.00', picture: { imgix_url: '/saafImage/coconuntChips.png' } },
+    {
+      title: 'Coconut',
+      picture: { imgix_url: '/saafImage/coconut222.jpg' },
+      description:
+        'Our fresh, whole coconuts are sourced directly from organic farms, ensuring unparalleled quality and natural goodness. Each coconut is handpicked at peak ripeness, delivering a refreshing burst of hydrating coconut water and creamy, nutrient-rich flesh. Perfect for drinking, cooking, or creating homemade coconut-based recipes, this versatile superfood is packed with electrolytes, healthy fats, and essential nutrients to support hydration, digestion, and overall wellness.',
+    },
+    {
+      title: 'Coconut Oil',
+      picture: { imgix_url: '/saafImage/cocoprd3.jpg' },
+      description:
+        'Our 100% pure, cold-pressed coconut oil is crafted from the finest organic coconuts, preserving its natural aroma, flavor, and health benefits. This versatile oil is a must-have for cooking, skincare, and haircare. Rich in medium-chain fatty acids like lauric acid, it supports metabolism, promotes healthy skin, and nourishes hair for a radiant shine. Use it for sautéing, baking, moisturizing dry skin, or as a deep-conditioning hair mask.',
+    },
+    {
+      title: 'Desiccated Coconut',
+      picture: { imgix_url: '/saafImage/Desiccated coconut.jpg' },
+      description:
+        'Our premium desiccated coconut is made from finely shredded, sun-dried organic coconut flesh, offering a delightful texture and rich, tropical flavor. Free from additives and preservatives, this all-natural product is perfect for baking, cooking, or adding a nutritious crunch to your dishes. Packed with fiber, healthy fats, and essential minerals, it’s a wholesome addition to cakes, cookies, curries, or smoothie bowls.',
+    },
+    {
+      title: 'Copra',
+      picture: { imgix_url: '/saafImage/cocoprd2.jpg' },
+      description:
+        'Our high-quality copra is the dried kernel of organic coconuts, carefully processed to retain its rich flavor and nutritional value. A key ingredient in traditional coconut oil production, copra is also used in culinary applications and animal feed. Sourced from sustainable farms, our copra is naturally sun-dried to preserve its purity and ensure a robust coconut taste. It’s an excellent choice for artisanal oil-making or as a base for coconut-based snacks.',
+    },
   ],
 };
 
@@ -38,6 +58,7 @@ const Products = () => {
         title: product.title,
         price: product.price,
         picture: product.picture.imgix_url,
+        description: product.description,
       },
     });
   };

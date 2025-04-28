@@ -28,7 +28,7 @@ const Home = () => (
         </div>
       </div>
       <div className={styles.hero_image}>
-        <img src="/saafImage/coconutLeafHome.jpeg" alt="Coconut Splash" />
+        <img src="/saafImage/saaf.jpg" alt="Coconut Splash" />
       </div>
     </div>
   </div>

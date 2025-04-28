@@ -11,9 +11,9 @@ const Footer = () => {
   ];
 
   const contactInfo = {
-    email: 'info@saafnaturals.com',
-    phone: '+1 (555) 123-4567',
-    address: '123 Coconut Grove Lane, Tropical City',
+    email: 'saafnaturals@gmail.com',
+    phone: '8111935267',
+    address: 'Thrissur, guruvayoor, Pincode : 680520',
   };
 
   return (
