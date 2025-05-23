@@ -14,7 +14,7 @@ const Contacts = () => {
   // Google Maps Embed URL
   // Replace the 'q' parameter with your business address or coordinates
   const googleMapUrl =
-    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019394374678!2d-122.41941568468132!3d37.77492977975966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f7c0a6d8f%3A0x6e9f6b7c98e7c7f!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sus!4v1635789212345!5m2!1sen!2sus';
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.3699514448567!2d76.0328724!3d10.628340800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba795af2ee4684f%3A0xa66dac3cf58dc0a4!2sSAAFNATURAL!5e0!3m2!1sen!2sin!4v1747979415632!5m2!1sen!2sin';
 
   return (
     <section className={cn(styles.contact_section, 'section_padding')} id="contact">
